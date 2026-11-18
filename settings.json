@@ -1,16 +1,13 @@
 {
-    "keywords": ["supergroupies", "遊戯王 ネムレリア プリズマ", "25時、ナイトコードで。 CD"],
-    "price_min": {
-        "百江なぎさ": 1000
-    },
-    "price_max": {
-        "supergroupies": 50000
-    },
+    "keywords": ["百江なぎさ"],
+    "price_min": {},
+    "price_max": {},
     "discord_hook_url": "",
     "telegram_token": "",
     "telegram_chat_id": "",
-	"proxies": {},
-    "exclude": ["セット"],
+    "wecom_webhook_url": "${{ secrets.WECOM_WEBHOOK }}",
+    "proxies": {},
+    "exclude": [],
     "image_display": true,
     "mercari_settings": {
         "condition_filters": {
