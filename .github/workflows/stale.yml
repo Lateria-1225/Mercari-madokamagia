@@ -1,0 +1,27 @@
+#此工作流警告并关闭在指定时间内没有活动的问题和PRs。
+#
+#您可以通过修改这个文件来调整行为。
+#欲了解更多信息，请参见：
+# https://github.com/actions/stale
+名字: 标记陈旧问题和请求
+
+在:
+时间表:
+  - 定时任务: '34 13 * * *'
+
+工作:
+不新鲜的:
+
+    runs-on: ubuntu-latest
+权限:
+问题: 写
+      pull-requests: 写
+
+步骤:
+    - 使用: actions/stale@v5
+与:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        stale-issue-message: “陈旧的问题信息”
+        stale-pr-message: “陈旧的拉请求消息”
+        stale-issue-label: 'no-issue-activity'
+        stale-pr-label: 'no-pr-activity'
